@@ -119,7 +119,8 @@ extension GameScene: SKPhysicsContactDelegate {
             snake?.addBodyPart()
             apple?.removeFromParent()
             createApple()
-        
+            
+        // MARK: - Столкновение змейки с краями!
         case CollisionCategory.EdgeBody:
             self.removeAllChildren()
             snake?.body.removeAll()
